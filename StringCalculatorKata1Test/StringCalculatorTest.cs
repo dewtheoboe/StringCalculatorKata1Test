@@ -39,5 +39,15 @@ namespace StringCalculatorKata1Test
             //Assert
             Assert.AreEqual(result, 3);
         }
+        [TestMethod]
+        public void AnyQuantityOfNumbersShouldAdd()
+        {
+            //Arrange
+            StringCalculator testcalc = new StringCalculator();
+            //Act
+            int result = testcalc.AddString("1","2","3","4","5");
+            //Assert
+            Assert.AreEqual(result, 15);
+        }
     }
 }

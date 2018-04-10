@@ -8,14 +8,27 @@ namespace StringCalculatorKata1
 {
     public class StringCalculator
     {
-        public int AddString(string A = "0", string B = "0", string C = "0")
+        public int AddString(params string[] numbers)
         {
-            int NumberA = int.Parse(A);
-            int NumberB = int.Parse(B);
-            int NumberC = int.Parse(C);
-            int res = NumberA + NumberB + NumberC;
-            return res;
+            int result = 0;
+            int i = 0;
+            for (; ;)
+                //for (int i=0; i< numbers.Length; i++)
+            {
+                if (i < numbers.Length)
+                    {
+                    result = result + int.Parse(numbers[i]);
+                    i++;
+                }
+                else
+                    break;
+                //result =+ int.Parse(numbers[i]);
+            }
+            return result;
+            //int NumberA = int.Parse(A);
+            //int NumberB = int.Parse(B);
+            //int res = NumberA + NumberB;
+           
         }
-
-    }
+      }
 }
