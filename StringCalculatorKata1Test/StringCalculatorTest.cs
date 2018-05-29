@@ -49,5 +49,22 @@ namespace StringCalculatorKata1Test
             //Assert
             Assert.AreEqual(result, 15);
         }
+
+        [TestMethod]
+        public void NumbersSeparatedByCommasInOneStringWorks()
+        {
+            //Arrange
+            StringCalculator testcalc = new StringCalculator();
+            //Act
+            int result = testcalc.AddString("1,2");
+            //Assert
+            Assert.AreEqual(result, 3);
+
+            
+
+        }
+
     }
+
+
 }

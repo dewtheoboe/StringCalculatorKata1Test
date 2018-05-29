@@ -17,7 +17,12 @@ namespace StringCalculatorKata1
             {
                 if (i < numbers.Length)
                     {
-                    result = result + int.Parse(numbers[i]);
+                    var separatenumbers = numbers[i].Split(',');
+                    // Console.WriteLine(separatenumbers);
+                    foreach (var j in separatenumbers)
+                    {
+                        result = result + int.Parse(j);
+                    }
                     i++;
                 }
                 else
